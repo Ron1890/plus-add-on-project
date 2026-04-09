@@ -1,9 +1,9 @@
-function showSelectedCountry(event) {
+function showSelectedCity(event) {
   event.preventDefault();
 
-  let selectedCountry = event.target.value;
+  let selectedCity = event.target.value;
 
-  if (selectedCountry === "paris") {
+  if (selectedCity === "paris") {
     let parisTime = moment()
       .tz("Europe/Paris")
       .format("dddd, MMMM D, YYYY H:mm:ss");
@@ -13,7 +13,7 @@ function showSelectedCountry(event) {
     );
   }
 
-  if (selectedCountry === "tokyo") {
+  if (selectedCity === "tokyo") {
     let tokyoTime = moment()
       .tz("Asia/Tokyo")
       .format("dddd, MMMM D, YYYY H:mm:ss");
@@ -23,7 +23,7 @@ function showSelectedCountry(event) {
     );
   }
 
-  if (selectedCountry === "sydney") {
+  if (selectedCity === "sydney") {
     let sydneyTime = moment()
       .tz("Australia/Sydney")
       .format("dddd, MMMM D, YYYY H:mm:ss");
@@ -34,5 +34,5 @@ function showSelectedCountry(event) {
   }
 }
 
-let countrySelect = document.querySelector("#countries");
-countrySelect.addEventListener("change", showSelectedCountry);
+let citySelect = document.querySelector("#cities");
+citySelect.addEventListener("change", showSelectedCity);
