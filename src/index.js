@@ -3,10 +3,6 @@ function showSelectedCountry(event) {
 
   let selectedCountry = event.target.value;
 
-  if (selectedCountry.length > 0) {
-    alert(selectedCountry);
-  }
-
   if (selectedCountry === "paris") {
     let parisTime = moment()
       .tz("Europe/Paris")
