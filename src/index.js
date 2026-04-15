@@ -1,9 +1,16 @@
 function showSelectedCity(event) {
-  if(event.target.value.length>0)
-{let currentTime= moment().tz(event.target.value).format("dddd, MMMM D, YYYY H:mm");
+  let selectedTimeZone = event.target.value;
+
+  let selectedCityText = event.target.options[event.target.selectedIndex].text;
+
+  if (selectedTimeZone.length > 0) {
+    let currentTime = moment()
+      .tz(selectedTimeZone)
+      .format("dddd, MMMM D, YYYY H:mm");
+
     alert(
-      `Your current time zone is ${event.target.value} and the current time is ${currentTime}`);
-    
+      `Your current city is ${selectedCityText} and the current time is ${currentTime}`,
+    );
   }
 }
 
